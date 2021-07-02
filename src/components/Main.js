@@ -6,7 +6,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { emptyCV };
+    this.state = emptyCV;
 
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.handleEducationChange = this.handleEducationChange.bind(this);
@@ -15,14 +15,15 @@ class Main extends React.Component {
 
   handlePersonalChange(e) {
     const { name, value } = e.target;
-
+    
     this.setState((prevState) => ({
       ...prevState,
       personalInfo: {
         ...prevState.personalInfo,
         [name]: value,
-      },
+      }
     }));
+    
   }
 
   handleEducationChange(e) {
@@ -52,7 +53,7 @@ class Main extends React.Component {
   render() {
     return (
       <Form
-        cv={emptyCV}
+        cv={this.state}
         handlePersonalChange={this.handlePersonalChange}
         handleExperienceChange={this.handleExperienceChange}
         handleEducationChange={this.handleEducationChange}
