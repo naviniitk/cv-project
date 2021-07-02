@@ -51,6 +51,7 @@ const Education = ({ educationInfo, onChange }) => {
         placeholder="To"
         value={educationInfo.to}
       />
+      <button>Add Education</button>
     </section>
   );
 };

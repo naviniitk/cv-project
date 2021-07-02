@@ -44,6 +44,7 @@ const Experience = ({ experienceInfo, onChange }) => {
         placeholder="To"
         value={experienceInfo.to}
       />
+      <button>Add Experience</button>
     </section>
   );
 };
