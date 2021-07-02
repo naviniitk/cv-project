@@ -8,7 +8,7 @@ const Personal = ({ personalInfo, onChange }) => {
   }
   return (
     <section title="Personal Information" direction="column" style={myStyle}>
-      Personal Information
+      PersonalInformation
       <Input
         onChange={(e) => onChange(e)}
         type="text"
