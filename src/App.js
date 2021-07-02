@@ -1,10 +1,10 @@
-import Form from './components/itemsCV/Form';
+import Main from './components/Main';
 import React from 'react';
 
 const App = () => {
   return (
     <div>
-      <Form />
+      <Main />
     </div>
   );
 };

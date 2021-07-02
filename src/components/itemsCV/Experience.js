@@ -1,42 +1,47 @@
 import React from 'react';
 import Input from '../../utils/Input';
 
-const Experience = ({experienceInfo, onChange}) => {
+const Experience = ({ experienceInfo, onChange }) => {
+  const myStyle = {
+    display: "flex",
+    flexDirection: "column"
+  }
   return (
-    <section title='Experince' direction='column'>
+    <section title="Experince" direction="column" style={myStyle}>
+      Experience
       <Input
         onChange={(e) => onChange(e)}
-        type='text'
-        name='position'
-        placeholder='Position'
+        type="text"
+        name="position"
+        placeholder="Position"
         value={experienceInfo.position}
       />
       <Input
         onChange={(e) => onChange(e)}
-        type='text'
-        name='company'
-        placeholder='Company'
+        type="text"
+        name="company"
+        placeholder="Company"
         value={experienceInfo.company}
       />
       <Input
         onChange={(e) => onChange(e)}
-        type='text'
-        name='city'
-        placeholder='City'
+        type="text"
+        name="city"
+        placeholder="City"
         value={experienceInfo.city}
       />
       <Input
         onChange={(e) => onChange(e)}
-        type='text'
-        name='from'
-        placeholder='From'
+        type="text"
+        name="from"
+        placeholder="From"
         value={experienceInfo.from}
       />
       <Input
         onChange={(e) => onChange(e)}
-        type='text'
-        name='to'
-        placeholder='To'
+        type="text"
+        name="to"
+        placeholder="To"
         value={experienceInfo.to}
       />
     </section>

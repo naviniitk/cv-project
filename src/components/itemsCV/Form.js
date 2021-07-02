@@ -3,18 +3,27 @@ import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
 
+
 const Form = ({
   cv,
   handlePersonalChange,
   handleExperienceChange,
-  handleEducationChange
+  handleEducationChange,
 }) => {
   return (
     <div>
-      <Personal personalInfo={cv.personalInfo} onChange={handlePersonalChange} />
-      <Education educationInfo={cv.educationInfo} onChange={handleEducationChange} />
-      <Experience experienceInfo={cv.experienceInfo} onChange={handleExperienceChange} />
-
+      <Personal
+        personalInfo={cv.personalInfo}
+        onChange={handlePersonalChange}
+      />
+      <Education
+        educationInfo={cv.educationInfo}
+        onChange={handleEducationChange}
+      />
+      <Experience
+        experienceInfo={cv.experienceInfo}
+        onChange={handleExperienceChange}
+      />
     </div>
   );
 };

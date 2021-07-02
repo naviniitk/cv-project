@@ -5,16 +5,16 @@ import Form from './itemsCV/Form';
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    
-    this.state = {emptyCV};
+
+    this.state = { emptyCV };
 
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.handleEducationChange = this.handleEducationChange.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
-  };
+  }
 
   handlePersonalChange(e) {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     this.setState((prevState) => ({
       ...prevState,
@@ -23,10 +23,10 @@ class Main extends React.Component {
         [name]: value,
       },
     }));
-  };
+  }
 
   handleEducationChange(e) {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     this.setState((prevState) => ({
       ...prevState,
@@ -35,10 +35,10 @@ class Main extends React.Component {
         [name]: value,
       },
     }));
-  };
+  }
 
   handleExperienceChange(e) {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     this.setState((prevState) => ({
       ...prevState,
@@ -47,9 +47,9 @@ class Main extends React.Component {
         [name]: value,
       },
     }));
-  };
-  
-  render () {
+  }
+
+  render() {
     return (
       <Form
         cv={emptyCV}
@@ -58,7 +58,7 @@ class Main extends React.Component {
         handleEducationChange={this.handleEducationChange}
       />
     );
-  };
-};
+  }
+}
 
 export default Main;
