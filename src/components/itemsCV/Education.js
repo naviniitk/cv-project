@@ -1,57 +1,32 @@
 import React from 'react';
-import Input from '../../utils/Input';
+import EducationForm from './EducationForm';
 
-const Education = ({ educationInfo, onChange }) => {
+const Education = ({
+  educationInfo,
+  onChange,
+  onAddEducation,
+  onDeleteEducation,
+}) => {
+  const educationItems = educationInfo.map((educationItem) => (
+    <EducationForm
+      id={educationItem.id}
+      educationItem={educationItem}
+      onChange={onChange}
+      onDeleteEducation={onDeleteEducation}
+    ></EducationForm>
+  ));
+
   const myStyle = {
-    display: "flex",
-    flexDirection: "column"
-  }
+    display: 'flex',
+    flexDirection: 'column',
+  };
   return (
-    <section title="Education" direction="column" style={myStyle}>
-      Education
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="universityName"
-        placeholder="University Name"
-        value={educationInfo.universityName}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="city"
-        placeholder="City"
-        value={educationInfo.city}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="degree"
-        placeholder="Degree"
-        value={educationInfo.degree}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="subject"
-        placeholder="Subject"
-        value={educationInfo.subject}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="from"
-        placeholder="From"
-        value={educationInfo.from}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="to"
-        placeholder="To"
-        value={educationInfo.to}
-      />
-      <button>Add Education</button>
+    <section style={myStyle}>
+      <h1>Education</h1>
+      {educationItems}
+      <button className="add-btn" onClick={onAddEducation}>
+        Add Education
+      </button>
     </section>
   );
 };

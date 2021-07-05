@@ -7,3 +7,7 @@ body {
   font-family: Arial;
   text-align: center;
 }
+
+.del-btn {
+  background-color: red;
+}

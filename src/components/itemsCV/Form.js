@@ -3,12 +3,16 @@ import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
 
-
 const Form = ({
   cv,
   handlePersonalChange,
   handleExperienceChange,
   handleEducationChange,
+  handleAddEducation,
+  handleAddExperience,
+  handleDeleteEducation,
+  handleDeleteExperience,
+  handleReset,
 }) => {
   return (
     <div>
@@ -19,11 +23,18 @@ const Form = ({
       <Education
         educationInfo={cv.educationInfo}
         onChange={handleEducationChange}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
       <Experience
         experienceInfo={cv.experienceInfo}
         onChange={handleExperienceChange}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
       />
+      <button type="reset" onClick={handleReset}>
+        Reset
+      </button>
     </div>
   );
 };

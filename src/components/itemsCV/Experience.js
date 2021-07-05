@@ -1,50 +1,32 @@
 import React from 'react';
-import Input from '../../utils/Input';
+import ExperienceForm from './ExperienceForm';
 
-const Experience = ({ experienceInfo, onChange }) => {
+const Experience = ({
+  experienceInfo,
+  onChange,
+  onAddExperience,
+  onDeleteExperience,
+}) => {
+  const experienceItems = experienceInfo.map((experienceItem) => (
+    <ExperienceForm
+      id={experienceItem.id}
+      experienceItem={experienceItem}
+      onChange={onChange}
+      onDeleteExperience={onDeleteExperience}
+    ></ExperienceForm>
+  ));
+
   const myStyle = {
-    display: "flex",
-    flexDirection: "column"
-  }
+    display: 'flex',
+    flexDirection: 'column',
+  };
   return (
-    <section title="Experince" direction="column" style={myStyle}>
-      Experience
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="position"
-        placeholder="Position"
-        value={experienceInfo.position}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="company"
-        placeholder="Company"
-        value={experienceInfo.company}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="city"
-        placeholder="City"
-        value={experienceInfo.city}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="from"
-        placeholder="From"
-        value={experienceInfo.from}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="text"
-        name="to"
-        placeholder="To"
-        value={experienceInfo.to}
-      />
-      <button>Add Experience</button>
+    <section style={myStyle}>
+      <h1>Experience</h1>
+      {experienceItems}
+      <button className="add-btn" onClick={onAddExperience}>
+        Add Experience
+      </button>
     </section>
   );
 };

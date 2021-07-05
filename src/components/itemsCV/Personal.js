@@ -3,12 +3,12 @@ import Input from '../../utils/Input';
 
 const Personal = ({ personalInfo, onChange }) => {
   const myStyle = {
-    display: "flex",
-    flexDirection: "column"
-  }
+    display: 'flex',
+    flexDirection: 'column',
+  };
   return (
     <section title="Personal Information" direction="column" style={myStyle}>
-      Personal Information
+      <h1>Personal Info</h1>
       <Input
         onChange={(e) => onChange(e)}
         type="text"
