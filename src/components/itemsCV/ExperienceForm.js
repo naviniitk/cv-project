@@ -11,41 +11,41 @@ const ExperienceForm = ({
   return (
     <>
       <Input
-        onChange={(e) => onChange(e)}
+        onChange={(e) => onChange(e, id)}
         type="text"
         name="position"
         placeholder="Position"
         value={experienceItem.position}
       />
       <Input
-        onChange={(e) => onChange(e)}
+        onChange={(e) => onChange(e, id)}
         type="text"
         name="company"
         placeholder="Company"
         value={experienceItem.company}
       />
       <Input
-        onChange={(e) => onChange(e)}
+        onChange={(e) => onChange(e, id)}
         type="text"
         name="city"
         placeholder="City"
         value={experienceItem.city}
       />
       <Input
-        onChange={(e) => onChange(e)}
+        onChange={(e) => onChange(e, id)}
         type="text"
         name="from"
         placeholder="From"
         value={experienceItem.from}
       />
       <Input
-        onChange={(e) => onChange(e)}
+        onChange={(e) => onChange(e, id)}
         type="text"
         name="to"
         placeholder="To"
         value={experienceItem.to}
       />
-      <button className="del-btn" onClick={onDeleteExperience(id)}>
+      <button className="del-btn" onClick={(id) => onDeleteExperience(id)}>
         Delete
       </button>
     </>

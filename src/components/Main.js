@@ -31,27 +31,35 @@ class Main extends React.Component {
     }));
   }
 
-  handleEducationChange(e) {
+  handleEducationChange(e, id) {
     const { name, value } = e.target;
+
+    const newEducation = this.state.educationInfo.map((education) => {
+      if(education.id === id){
+        return {...education, [name]: value};
+      }
+      return education;
+    });
 
     this.setState((prevState) => ({
       ...prevState,
-      educationInfo: {
-        ...prevState.educationInfo,
-        [name]: value,
-      },
+      educationInfo: [...newEducation],
     }));
   }
 
-  handleExperienceChange(e) {
+  handleExperienceChange(e, id) {
     const { name, value } = e.target;
+
+    const newExperience = this.state.experienceInfo.map((experience) => {
+      if(experience.id === id){
+        return {...experience, [name]: value};
+      }
+      return experience;
+    });
 
     this.setState((prevState) => ({
       ...prevState,
-      experienceInfo: {
-        ...prevState.experienceInfo,
-        [name]: value,
-      },
+      experienceInfo: [...newExperience],
     }));
   }
 
@@ -91,14 +99,31 @@ class Main extends React.Component {
     }));
   }
 
-  handleDeleteExperience(e) {}
-
-  handleDeleteEducation(e) {}
-
-  handleReset(e) {
+  handleDeleteExperience(id) {
+    const newExperience = this.state.experienceInfo.filter(
+      (experience) => experience.id !== id
+    );
     this.setState((prevState) => ({
       ...prevState,
+      experienceInfo: [newExperience],
     }));
+  }
+
+  handleDeleteEducation(id) {
+    const newEducation = this.state.educationInfo.filter(
+      (education) => education.id !== id
+    );
+    this.setState((prevState) => ({
+      ...prevState,
+      educationInfo: [newEducation],
+    }));
+  }
+
+  handleReset(e) {
+    this.setState(
+      emptyCV
+    )
+    
   }
 
   render() {
