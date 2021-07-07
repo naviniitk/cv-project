@@ -40,16 +40,16 @@ const EducationForm = ({
       />
       <Input
         onChange={(e) => onChange(e, id)}
-        type="text"
+        type="date"
         name="from"
-        placeholder="From"
+        placeholder="From:"
         value={educationItem.from}
       />
       <Input
         onChange={(e) => onChange(e, id)}
-        type="text"
+        type="date"
         name="to"
-        placeholder="To"
+        placeholder="To:"
         value={educationItem.to}
       />
       <button className="del-btn" onClick={(id) => onDeleteEducation(id)}>

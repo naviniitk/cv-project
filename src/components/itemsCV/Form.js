@@ -32,7 +32,7 @@ const Form = ({
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
       />
-      <button type="reset" onClick={handleReset}>
+      <button id="reset-btn" type="reset" onClick={handleReset}>
         Reset
       </button>
     </div>

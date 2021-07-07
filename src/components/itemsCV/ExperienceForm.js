@@ -7,7 +7,6 @@ const ExperienceForm = ({
   onChange,
   onDeleteExperience,
 }) => {
-  
   return (
     <>
       <Input
@@ -33,16 +32,16 @@ const ExperienceForm = ({
       />
       <Input
         onChange={(e) => onChange(e, id)}
-        type="text"
+        type="date"
         name="from"
-        placeholder="From"
+        placeholder="From:"
         value={experienceItem.from}
       />
       <Input
         onChange={(e) => onChange(e, id)}
-        type="text"
+        type="date"
         name="to"
-        placeholder="To"
+        placeholder="To:"
         value={experienceItem.to}
       />
       <button className="del-btn" onClick={(id) => onDeleteExperience(id)}>
