@@ -1,0 +1,2 @@
+body{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;margin:auto;background-color:#282c34;color:#fff;padding:40px;font-family:"monospace"}.del-btn{background-color:red;color:#fff}.add-btn,.del-btn{font-size:20px;margin:0 0 10px}#reset-btn,.add-btn,.del-btn{border:none;padding:10px;border-radius:5px}#reset-btn{font-size:15px}input[type=date]:not(.has-value):before{color:#667077;content:attr(placeholder)}
+/*# sourceMappingURL=main.85dd68fc.chunk.css.map */
